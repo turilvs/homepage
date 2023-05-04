@@ -17,18 +17,21 @@
     <header class="header">
       <nav id="navbar">
         <ul id="menu">
-          <li id="menu-item1" class="menu-item"><a href="#">moi</a></li>
-          <li id="menu-item2" class="menu-item"><a href="#">moi</a></li>
-          <li id="menu-item3" class="menu-item"><a href="#">moi</a></li>
+          <li id="menu-item1" class="menu-item"><a href="#about">About</a></li>
+          <li id="menu-item2" class="menu-item"><a href="#">Projects</a></li>
+          <li id="menu-item3" class="menu-item">
+            <a href="#footer">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <div class="main noisy">
+
+    <div id="main" class="main noisy">
       <h1 class="title-container">
         <span class="title ttop">Artturi</span>
         <span class="title tbtm">Rantala</span>
       </h1>
-      <div class="content">
+      <div id="about" class="narrow">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus
           augue vitae arcu ultrices, in dictum metus venenatis. Nunc mollis sit
@@ -138,15 +141,30 @@
         <p>
           Curabitur sed nisi laoreet, porta mauris eget, volutpat massa. Donec
           erat dui, rutrum eget ornare et, egestas aliquet est. Nunc sit amet
-          dolor auctor, euismod turpis eu, sagittis felis. Aenean faucibus ut
+          dolor auctor, euismod turpis eu, sagittis felis. Aenean faucibus uta
           orci a finibus. Nam luctus consequat pharetra. Cras nec lectus vel
           purus tempor semper a et risus. Vivamus blandit tincidunt est eget
           semper. Duis vitae velit eget tellus vehicula tempor. Nam placerat
           lobortis arcu finibus finibus. Maecenas auctor volutpat tempor.
         </p>
       </div>
-      <div class="content2"></div>
+      <div id="footer" class="footer">
+        <div class="other-sites link-container">
+          <p class="footer-topic">Other sites</p>
+          <ul class="site-links footer-links">
+            <li class="footer-link"><a href="#">Github</a></li>
+            <li class="footer-link"><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="contact link-container">
+          <p class="footer-topic">Contact</p>
+          <ul class="contact-links footer-links">
+            <li class="footer-link">
+              <a href="#">Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="footer"></div>
   </body>
 </html>
