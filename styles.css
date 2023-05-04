@@ -35,6 +35,7 @@ body {
     justify-content: center;
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 
 .title-container {
@@ -87,6 +88,12 @@ body {
     margin: 0px;
 }
 
+.menu-highlight {
+    background: var(--color-menu-highlight);
+    padding: 10px;
+    margin: 0px;
+}
+
 .menu-item a {
     font-weight: 700;
     color: var(--color-menu-text);
@@ -98,9 +105,10 @@ body {
     width: 100%;
     padding-top: 6em;
     background: var(--color-main-noisy);
-    box-shadow: 30px  30px 30px 30px #282a2d;
     margin: 0;
     box-shadow: 0px 3px 5px black;
+    position: relative;
+    z-index: 1;
 }
 
 #about {
@@ -111,13 +119,12 @@ body {
 
 .projects {
     display: flex;
-    position: relative;
     background: var(--color-noisy-experimental);
     height: 50vh;
     width: 100%;
     justify-content: center;
     align-items: center;
-    z-index: -1;
+    position: relative;
 }
 
 .project {
@@ -143,7 +150,8 @@ body {
     height: 20em;
     margin: 0;
     padding: 0;
-    box-shadow: 0px -3px 3px black
+    box-shadow: 0px -3px 3px black;
+    position: relative;
 }
 
 .link-container {
@@ -174,6 +182,12 @@ body {
     list-style-type: none;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+    padding: 60px 0;
+}
 
 .transparent {
     background: var(--color-blur);
