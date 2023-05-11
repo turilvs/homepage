@@ -37,7 +37,6 @@ body {
     justify-content: center;
     position: fixed;
     width: 100%;
-    margin-left: 10px;
     z-index: 2;
 }
 
@@ -104,6 +103,8 @@ body {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     padding-top: 6em;
@@ -120,14 +121,34 @@ body {
     scroll-behavior: smooth;
 }
 
+#about-h {
+    margin-top: 7rem;
+    font-size: 3rem;
+}
+
 .projects {
     display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 5rem;
     background: var(--color-experimental-noisy);
-    height: 50em;
+    height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
     position: relative;
+
+}
+#projects-h {
+    width: 100%;
+    font-size: 3rem;
+    display: flex;    
+    justify-content: left;
+    align-items: center;
+}
+#projects-h h1 {
+    
+    margin-left: 15vw;
 }
 
 .project {
@@ -184,6 +205,25 @@ body {
 .footer-link {
     list-style-type: none;
 }
+
+.to-top-button {
+    display: none; 
+    position: fixed;
+    z-index: 99;
+    bottom: 2rem;
+    right: 3rem;
+    border: solid 4px black;
+    outline: none;
+    background-color: red;
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 50%;
+    transition: all 200ms ease;
+}
+
+.to-top-button:hover {
+    background-color: #555; 
+  }
 
 .card-container {
     display: flex;
