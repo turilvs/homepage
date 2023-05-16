@@ -3,13 +3,14 @@
     --color-main-noisy: rgb(3, 19, 14);
     --color-experimental-noisy: rgb(73, 82, 79);
     --color-secondary-noisy:rgb(56, 84, 75);
-    --color-main-txt: rgba(235, 255, 237, 1);
+    --color-main-txt: rgb(250, 248, 244);
     --color-card-bg: rgb(223, 223, 220);
     --color-footer-links: rgba(235, 255, 237, 1);
     --color--secondary: rgba(48,76,66, 1);
     --color-highlight: rgba(143, 220, 194, 0.1);
     --color-menu-highlight: rgb(78, 112, 101);
     --color-blur: rgba(3, 19, 20, 0.9);
+    --color-card-popup: rgba(0, 0, 0, 0.5);
     --color-menu-text: #dbeadf;
 }
 
@@ -42,12 +43,15 @@ body {
 
 .title-container {
     display: flex;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
     /* position: relative; */
     flex-direction: column;
     align-items: center;
     font-size: 15em;
     width: 100%;
     height: fit-content;
+    overflow-x: hidden;
 }
 
 .title {
@@ -98,7 +102,7 @@ body {
 
 .menu-item a {
     font-weight: 700;
-    color: var(--color-menu-text);
+    color: var(--color-main-txt);
     text-decoration: none;
 }
 
@@ -107,7 +111,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding-top: 6em;
+    
     background: var(--color-main-noisy);
     margin: 0;
     box-shadow: 0px 3px 5px black;
@@ -117,19 +121,19 @@ body {
 
 #about {
     display: flex;
+    padding-top: 7rem;
     flex-direction: column;
     scroll-behavior: smooth;
 }
 
 #about-h {
-    margin-top: 7rem;
     font-size: 3rem;
 }
 
 .projects {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    padding-top: 7rem;
     padding-bottom: 5rem;
     background: var(--color-experimental-noisy);
     height: 100%;
@@ -147,8 +151,7 @@ body {
     align-items: center;
 }
 #projects-h h1 {
-    
-    margin-left: 15vw;
+    margin-left: 25%; 
 }
 
 .project {
@@ -207,14 +210,17 @@ body {
 }
 
 .to-top-button {
-    display: none; 
+    display: none;
     position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
     z-index: 99;
     bottom: 2rem;
     right: 3rem;
     border: solid 4px black;
-    outline: none;
-    background-color: red;
+    background-color:  var(--color-secondary-noisy);
     cursor: pointer;
     padding: 1em;
     border-radius: 50%;
@@ -248,36 +254,73 @@ body {
 .card {
     display: flex;  
     flex-direction: column;
-    background: var(--color-card-bg);
+    background: var(--color-main-txt);
     border-radius: 10px;
     width: 100%;
     position: relative;
     text-align: center;
     aspect-ratio: 2.6 / 3;
-    color: black;
     box-shadow: 3px 7px 6px rgba(0,0,0,0.3);
     transition: all 300ms ease;
+    overflow: hidden;
 }
 
 .card:hover  {
     box-shadow: 3px 1em 7px rgba(0,0,0,0.3);
     transform: translateY(-1em);
 }
+.card:hover  > .card-popup {
+    transform: translateY(0);
+}
 .c1  {
-   grid-column-start: 1; 
-   grid-column-end: 7; 
+    background-color: rgb(90, 8, 90);
+    grid-column-start: 1; 
+    grid-column-end: 7; 
 }
 .c2  {
+    background-color: rgb(10, 67, 10);
     grid-column-start: 7; 
     grid-column-end: 13; 
 }
 .c3  {
-   grid-column-start: 13; 
-   grid-column-end: 19; 
+    background-color: rgb(10, 67, 10);
+    grid-column-start: 13; 
+    grid-column-end: 19; 
 }
 .c4  {
-   grid-column-start: 19; 
-   grid-column-end: 25;
+    background-color: rgb(10, 67, 10);
+    grid-column-start: 19; 
+    grid-column-end: 25;
+}
+
+.card-popup {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    position: absolute;
+    color: var(--color-main-txt);
+    bottom: 0;
+    width: 100%;
+    /* transform: translateY(0); */
+    transform: translateY(calc(48px + 18em));
+    transition: transform 0.3s;
+    background: var(--color-card-popup);
+    /* backdrop-filter: blur(3px); */
+    height: 100%;
+}
+
+.card-title {
+    margin-bottom: 0;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.github-logo {
+    padding-right: .3em;
+    font-size: 2.5em;
+    
 }
 
 .transparent {
