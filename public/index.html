@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+    <meta name="description" content="Artturi Rantala, Developer" />
+    <title>Artturi Rantala</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="index.js" defer></script>
+    <script defer src="/__/firebase/9.22.0/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/9.22.0/firebase-auth-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.22.0/firebase-database-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.22.0/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.22.0/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.22.0/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.22.0/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.22.0/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.22.0/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.22.0/firebase-performance-compat.js"
+    ></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script
+      src="https://kit.fontawesome.com/77e8b97448.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav id="navbar">
+        <ul id="menu">
+          <li id="menu-item1" class="menu-item"><a href="#about">About</a></li>
+          <li id="menu-item2" class="menu-item">
+            <a href="#projects">Projects</a>
+          </li>
+          <li id="menu-item3" class="menu-item">
+            <a href="#footer">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="main" class="main noisy">
+      <h1 class="title-container">
+        <span class="title ttop">Artturi</span>
+        <span class="title tbtm">Rantala</span>
+      </h1>
+      <div id="about" class="narrow">
+        <div id="about-h">
+          <h1>About</h1>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus
+          augue vitae arcu ultrices, in dictum metus venenatis. Nunc mollis sit
+          amet quam quis vestibulum. Sed sollicitudin pharetra eros, ac
+          porttitor dolor dapibus in. Phasellus tortor orci, sodales nec
+          vestibulum a, pulvinar non urna. Morbi ut ante at quam congue commodo
+          et id purus. Nam eros arcu, pretium in auctor at, posuere sit amet
+          risus. Donec mollis efficitur dapibus. Morbi dapibus tempus tellus, ac
+          tempor erat blandit sit amet. Cras suscipit consequat sem vel ornare.
+          Nullam non odio ac ex placerat euismod ac eget sem. Fusce facilisis
+          odio sit amet neque feugiat malesuada. Vestibulum pretium ornare nunc,
+          id vulputate risus pharetra vitae. Fusce at mauris rhoncus, elementum
+          sem eget, sodales libero.
+        </p>
+        <p>
+          Proin et justo vehicula, tincidunt felis non, interdum mi. Proin vitae
+          quam ut velit finibus interdum. Praesent ac lacinia massa, eu
+          efficitur eros. In pharetra auctor lorem eu accumsan. Duis auctor
+          imperdiet erat, convallis auctor diam laoreet vitae. Nullam sodales
+          dolor non est iaculis, id volutpat urna dictum. Duis porttitor mauris
+          vitae lorem viverra, ut sodales mauris euismod. Ut nulla mauris,
+          convallis id arcu id, scelerisque malesuada tortor. Quisque tempus
+          orci ac lorem lobortis convallis. Fusce non bibendum urna, vel dapibus
+          arcu. Integer a tortor sapien. Cras sem purus, semper at tellus eu,
+          maximus elementum lacus.
+        </p>
+        <p>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Aliquam a urna dapibus, cursus massa
+          scelerisque, mattis arcu. Vivamus ut neque sed leo egestas dictum.
+          Nulla vulputate mollis lectus at aliquet. Mauris iaculis cursus
+          ligula, vitae suscipit justo pretium at. Aenean nisl metus, egestas et
+          purus non, pellentesque feugiat lacus. Nullam ut finibus elit, vitae
+          congue mi. Pellentesque eu mauris at justo scelerisque hendrerit.
+        </p>
+        <p>
+          Cras imperdiet urna ex, aliquam commodo odio dapibus vitae. Aenean
+          iaculis quam id lacus dignissim dapibus. Curabitur pretium vitae eros
+          ac malesuada. Aenean dolor nisi, rhoncus vel tincidunt at, mollis eget
+          neque. Maecenas porttitor est vel urna aliquam, quis porttitor augue
+          scelerisque. Curabitur nec mauris dui. Donec vehicula massa mattis
+          nisl cursus, quis bibendum dui ultrices. Vestibulum ornare ante enim,
+          at sollicitudin eros mattis ac.
+        </p>
+        <p>
+          Pellentesque volutpat lectus mi, sit amet tristique risus sagittis
+          interdum. Maecenas viverra vel augue vel bibendum. Vestibulum purus
+          nunc, dapibus ac consectetur nec, finibus ac ex. Maecenas tellus
+          sapien, efficitur at sem at, gravida sagittis erat. Nulla quis
+          suscipit nisl, at fermentum dolor. Nullam tellus dolor, iaculis non
+          odio a, varius tempus dui. Sed eu lacus fringilla, sagittis enim et,
+          lacinia lectus. Duis eleifend nisl ut ex dictum aliquam. Duis id
+          tellus vestibulum, pulvinar augue quis, posuere libero. Phasellus
+          posuere vulputate imperdiet. Proin ultricies pellentesque condimentum.
+          Duis placerat sed orci vitae elementum.
+        </p>
+        <p>
+          Phasellus porttitor efficitur pharetra. Sed quis rutrum dolor.
+          Phasellus ut ante id nisl pharetra fermentum vel in ligula. Cras
+          dignissim bibendum scelerisque. Phasellus nec vestibulum velit, sed
+          eleifend justo. Integer tempor lorem non venenatis hendrerit. Orci
+          varius natoque penatibus et magnis dis parturient montes, nascetur
+          ridiculus mus. Proin sed turpis lobortis libero pharetra tincidunt.
+          Nullam placerat metus eu tellus accumsan rutrum. Mauris mollis auctor
+          tincidunt.
+        </p>
+        <p>
+          Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Praesent vitae ipsum luctus, suscipit est sed,
+          rutrum purus. In ullamcorper convallis volutpat. Integer finibus ac
+          quam eget dictum. Nullam dui odio, mattis in venenatis non, auctor
+          vitae velit. Nam fringilla laoreet lacinia. Donec et ex condimentum,
+          placerat est a, interdum nibh. Ut massa urna, imperdiet a urna sit
+          amet, semper semper lacus. Ut non felis nec mauris placerat accumsan
+          vel at nulla. Sed porttitor orci nulla, et feugiat purus auctor id. In
+          rutrum vulputate augue nec viverra. Integer enim diam, pretium non
+          orci vel, elementum lobortis nibh. Maecenas euismod justo a est
+          vehicula, pulvinar porta sapien luctus. Etiam laoreet purus id
+          accumsan dignissim. Mauris sem risus, sodales sit amet sagittis ac,
+          facilisis in massa. Pellentesque vitae ex nisl.
+        </p>
+        <p>
+          Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. In non mauris congue, sollicitudin lectus
+          vestibulum, vestibulum sem. Etiam ultricies mi eu justo semper
+          dignissim. Donec nec nulla non eros dictum faucibus. Praesent sapien
+          diam, lobortis sed dui eu, sollicitudin efficitur magna. Sed cursus
+          nisi ipsum, et vehicula est finibus eget. Integer eleifend mollis
+          auctor. Cras aliquet ut nisl in convallis. Donec ante erat,
+          consectetur non hendrerit eget, malesuada id lacus. Phasellus
+          vestibulum volutpat enim, ut viverra quam cursus ac. Aliquam ante
+          eros, ullamcorper ut pharetra ac, eleifend ut enim.
+        </p>
+        <p>
+          Nunc auctor mauris at arcu suscipit varius. Donec viverra ex eget
+          ipsum auctor, fringilla finibus nunc vestibulum. Ut fermentum gravida
+          ante, ac posuere mi mollis eget. Nulla sit amet turpis dapibus,
+          gravida massa non, vestibulum magna. Sed condimentum ac ante sit amet
+          finibus. Nullam enim odio, tincidunt id fermentum id, tempor sed
+          magna. Phasellus vehicula metus mauris. Phasellus sagittis ante lacus,
+          non convallis sem feugiat vitae. Morbi mattis ipsum ligula, eget
+          rhoncus ex ornare ut. Suspendisse potenti. Donec eleifend mauris ac
+          ante imperdiet accumsan. Vestibulum ante ipsum primis in faucibus orci
+          luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu
+          ad litora torquent per conubia nostra, per inceptos himenaeos.
+        </p>
+        <p>
+          Curabitur sed nisi laoreet, porta mauris eget, volutpat massa. Donec
+          erat dui, rutrum eget ornare et, egestas aliquet est. Nunc sit amet
+          dolor auctor, euismod turpis eu, sagittis felis. Aenean faucibus uta
+          orci a finibus. Nam luctus consequat pharetra. Cras nec lectus vel
+          purus tempor semper a et risus. Vivamus blandit tincidunt est eget
+          semper. Duis vitae velit eget tellus vehicula tempor. Nam placerat
+          lobortis arcu finibus finibus. Maecenas auctor volutpat tempor.
+        </p>
+      </div>
+      <div class="to-top-button noisy">
+        <a>
+          <i class="fa-solid fa-arrow-up" style="color: #eceada"></i>
+        </a>
+      </div>
+    </div>
+    <div id="projects" class="projects noisy">
+      <div id="projects-h">
+        <h1>Projects</h1>
+      </div>
+      <div class="card-container">
+        <div class="card-grid">
+          <div class="card c1">
+            <div class="card-popup">
+              <h1 class="card-title">Kide Bot</h1>
+              <div class="card-text">
+                <p>
+                  Pythonilla kirjoitettu ohjelma, jonka avulla ostetaan
+                  automaattisesti maksimimäärä haluttuja lippuja Kide.appista.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="https://github.com/turilvs/kidebot" target="_blank"
+                  ><i
+                    class="fa-brands fa-github github-logo"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="card c2">
+            <div class="card-empty">
+              <h1 class="card-title">Coming Soon</h1>
+              <div class="card-text">
+                <p>
+                  Pythonilla kirjoitettu ohjelma, jonka avulla ostetaan
+                  automaattisesti maksimimäärä haluttuja lippuja Kide.appista.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="https://github.com/turilvs/kidebot" target="_blank"
+                  ><i
+                    class="fa-brands fa-github github-logo"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+              </div>
+              <div class="card-empty-glass"></div>
+            </div>
+          </div>
+          <div class="card c3">
+            <div class="card-empty">
+              <h1 class="card-title">Coming Soon</h1>
+              <div class="card-text">
+                <p>
+                  Pythonilla kirjoitettu ohjelma, jonka avulla ostetaan
+                  automaattisesti maksimimäärä haluttuja lippuja Kide.appista.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="https://github.com/turilvs/kidebot" target="_blank"
+                  ><i
+                    class="fa-brands fa-github github-logo"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+              </div>
+              <div class="card-empty-glass"></div>
+            </div>
+          </div>
+          <div class="card c4">
+            <div class="card-empty">
+              <h1 class="card-title">Coming Soon</h1>
+              <div class="card-text">
+                <p>
+                  Pythonilla kirjoitettu ohjelma, jonka avulla ostetaan
+                  automaattisesti maksimimäärä haluttuja lippuja Kide.appista.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="https://github.com/turilvs/kidebot" target="_blank"
+                  ><i
+                    class="fa-brands fa-github github-logo"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+              </div>
+              <div class="card-empty-glass"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="footer noisy">
+      <div class="other-sites link-container">
+        <p class="footer-topic">Other sites</p>
+        <ul class="site-links footer-links">
+          <li class="footer-link"><a href="#">Github</a></li>
+        </ul>
+      </div>
+      <div class="contact link-container">
+        <p class="footer-topic">Contact</p>
+        <ul class="contact-links footer-links">
+          <li class="footer-link">
+            <a href="#">Email</a>
+          </li>
+          <li class="footer-link"><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
