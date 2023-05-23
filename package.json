@@ -1,5 +1,17 @@
 {
   "dependencies": {
+    "eslint": "^8.39.0",
+    "firebase-tools": "^12.1.0",
     "sass": "^1.62.1"
-  }
+  },
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "author": "Artturi Rantala",
+  "license": "ISC"
 }
