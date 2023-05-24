@@ -16,6 +16,7 @@
     --color-menu-text: rgb(219, 234, 223);
     --body-font: "Helvetica neue", sans-serif;
     --padding-areas: 5em;
+    --header-font-size: 3em;
 }
 
 
@@ -133,8 +134,9 @@ body {
     scroll-behavior: smooth;
 }
 
-#about-h {
-    font-size: 3rem;
+#about-header {
+    font-size: var(--header-font-size);
+    
 }
 
 .projects {
@@ -150,9 +152,10 @@ body {
     position: relative;
 
 }
-#projects-h {
+#projects-header {
     width: 100%;
-    font-size: 3rem;
+    padding-left: .4em;
+    font-size: var(--header-font-size);
     display: flex;    
     justify-content: left;
     align-items: center;
@@ -192,11 +195,14 @@ body {
     '. . . . . . . .'
     '. . . a b . . .'
     '. . . . . . . . ';
-    width: 70%;
     border-radius: 1em;
-    height: 20em;
-    margin: 1em;
+    width: 100%;
+    aspect-ratio: 2.5/1;
     padding: 0;
+}
+
+.footer-header {
+    padding-left: .4em;
 }
 
 .link-container {
