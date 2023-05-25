@@ -19,6 +19,25 @@
     --header-font-size: 3em;
 }
 
+@keyframes slide-inner {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-20%);
+        font-size: .6em;
+        
+    }
+  }
+@keyframes slide-outer {
+  from {
+      transform: translateX(50%);
+  }
+  to {
+      transform: translateX(0);
+      
+  }
+}
 
 html {
     scroll-behavior: smooth;
@@ -52,20 +71,34 @@ body {
 
 .title-container {
     display: flex;
+    flex-direction: column;
     margin-top: 10rem;
     margin-bottom: 5rem;
     /* position: relative; */
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-size: 15em;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     overflow: hidden;
+    border: solid red 1px;
 }
 
-.title {
-    height: auto;
-    width: fit-content;
+.ttop, .tbtm {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: solid red 1px;
+}
+
+.inner-ttop, .inner-tbtm {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    animation: slide-inner 1s 2s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation-fill-mode: forwards;
+    border: solid red 1px;
 }
 
 
