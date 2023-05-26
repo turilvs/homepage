@@ -21,12 +21,12 @@
 
 @keyframes slide-inner {
     from {
-        transform: translateX(0);
+        transform: translateX(17%);  
+        font-size: 1em;
     }
     to {
-        transform: translateX(-20%);
-        font-size: .6em;
-        
+        transform: none;
+        font-size: .4em;        
     }
   }
 @keyframes slide-outer {
@@ -34,8 +34,7 @@
       transform: translateX(50%);
   }
   to {
-      transform: translateX(0);
-      
+      transform: none;
   }
 }
 
@@ -62,56 +61,55 @@ body {
 
 .header {
     display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 1.3em;
+    background: var(--color-main-noisy);
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
 }
 
 .title-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10rem;
+    display: inline-block;
+    margin-top: 2rem;
     margin-bottom: 5rem;
+    padding-left: 2%;
+    font-size: 13rem;
     /* position: relative; */
-    align-items: center;
-    justify-content: center;
-    font-size: 15em;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    border: solid red 1px;
+    /* border: solid green 1px; */
 }
 
 .ttop, .tbtm {
     display: flex;
-    text-align: center;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    border: solid red 1px;
+    animation: slide-outer 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+    /* border: solid red 1px; */
 }
 
 .inner-ttop, .inner-tbtm {
     display: inline-block;
     width: 100%;
     height: 100%;
-    animation: slide-inner 1s 2s cubic-bezier(0.5, 0, 0.1, 1) both;
-    animation-fill-mode: forwards;
-    border: solid red 1px;
+    animation: slide-inner 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+    /* border: solid blue 1px; */
 }
 
 
 #navbar {
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: center;
     width: 19em;
-    border-radius: 15px;
     height: 4em;
-    margin-top: 20px;
+    border-radius: 15px;
     padding: 0;
     transition: all 200ms ease;
+    z-index: 2;
 }
 #menu {
     display: flex;
