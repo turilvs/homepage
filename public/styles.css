@@ -19,24 +19,32 @@
     --header-font-size: 3em;
 }
 
-@keyframes slide-inner {
+@keyframes a-inner {
     from {
-        transform: translateX(17%);  
+        /* transform: translateX(1.3em);   */
         font-size: 1em;
     }
     to {
-        transform: none;
         font-size: .4em;        
     }
   }
-@keyframes slide-outer {
+@keyframes slide-inner {
   from {
-      transform: translateX(50%);
+      transform: translate(100%, 100%);
   }
   to {
       transform: none;
   }
 }
+
+@keyframes slide-outer {
+    from {
+        transform: translate(50%, 0);
+    }
+    to {
+        transform: none;
+    }
+  }
 
 html {
     scroll-behavior: smooth;
@@ -71,31 +79,40 @@ body {
 }
 
 .title-container {
-    display: inline-block;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    padding-left: 2%;
-    font-size: 13rem;
-    /* position: relative; */
     width: 100%;
+    height: 39rem;
+    font-size: 13rem;
+    position: relative;
+    border: solid green 1px;
+}
+
+.title-inner-container {
+    width: 66%;
     height: 100%;
-    /* border: solid green 1px; */
+    border: solid purple 1px;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    border: solid purple 1px;
 }
 
 .ttop, .tbtm {
-    display: flex;
     width: 50%;
     height: 100%;
-    animation: slide-outer 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-    /* border: solid red 1px; */
+    animation: slide-inner 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+    border: solid red 1px;
 }
 
-.inner-ttop, .inner-tbtm {
+.title-inner {
     display: inline-block;
+    padding-left: 2%;
     width: 100%;
     height: 100%;
-    animation: slide-inner 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-    /* border: solid blue 1px; */
+    border: solid blue 1px;
 }
 
 
@@ -104,6 +121,7 @@ body {
     position: fixed;
     align-items: center;
     justify-content: center;
+    top: 1em;
     width: 19em;
     height: 4em;
     border-radius: 15px;
@@ -439,3 +457,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 } */
+@media (prefers-reduced-motion: no-preference) {
+    .shrink-inner {
+        animation: a-inner 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    /* .fixed-title { */
+    /* } */
+
+  }
