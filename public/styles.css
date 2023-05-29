@@ -95,9 +95,13 @@ body {
 .title-wrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    font-size: 12rem;
+    top: 0;
+    width: 3.3rrem;
     height: fit-content;
-    border: solid purple 1px;
+    border: solid green 1px;
 }
 
 .ttop, .tbtm {
