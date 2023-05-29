@@ -48,6 +48,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: calc(15px + 0.390625vw);
 }
 
 body { 
@@ -71,7 +72,6 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    font-size: 1.3em;
     background: var(--color-main-noisy);
     flex-direction: column;
     align-items: center;
@@ -80,16 +80,15 @@ body {
 
 .title-container {
     width: 100%;
-    height: 39rem;
-    font-size: 13rem;
+    height: 36em;
     position: relative;
     border: solid green 1px;
 }
 
 .title-inner-container {
-    width: 66%;
+    width: 66.66%;
     height: 100%;
-    border: solid purple 1px;
+    border: solid green 1px;
 }
 
 .title-wrapper {
@@ -105,10 +104,10 @@ body {
 }
 
 .ttop, .tbtm {
-    width: 50%;
+    width: 100%;
     height: 100%;
     animation: slide-inner 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-    border: solid red 1px;
+    border: solid green 1px;
 }
 
 .title-inner {
@@ -116,7 +115,7 @@ body {
     padding-left: 2%;
     width: 100%;
     height: 100%;
-    border: solid blue 1px;
+    border: solid green 1px;
 }
 
 
