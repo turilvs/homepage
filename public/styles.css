@@ -15,19 +15,20 @@
     --color-card-popup: rgba(0, 0, 0, 0.3);
     --color-menu-text: rgb(219, 234, 223);
     --body-font: "Helvetica neue", sans-serif;
+    --font-gt-america: "GT-America-Bold", sans-serif;
     --padding-areas: 5em;
     --header-font-size: 3em;
 }
 
 @keyframes a-inner {
     from {
-        /* transform: translateX(1.3em);   */
-        font-size: 1em;
+        font-size: 3em;
     }
     to {
-        font-size: .4em;        
+        font-size: 1em;
     }
   }
+
 @keyframes slide-inner {
   from {
       transform: translate(100%, 100%);
@@ -37,19 +38,31 @@
   }
 }
 
-@keyframes slide-outer {
-    from {
-        transform: translate(50%, 0);
-    }
-    to {
-        transform: none;
-    }
-  }
-
 html {
     scroll-behavior: smooth;
-    font-size: calc(15px + 0.390625vw);
 }
+
+
+h1, h2, p {
+    font-size: clamp(var(--min), var(--val), var(--max));
+  }
+  
+  /* Fontti koot */
+  h1 {
+    --min: 1.5em; /* min */
+    --val: 1.96em; /* preferred */
+    --max: 2.5em; /* max */
+  }
+  h2 {
+    --min: 1.3em;   /* min */
+    --val: 1.69;     /* preferred */
+    --max: 2.25em;  /* max */
+  }
+  p {
+    --min: 1em;   /* min */
+    --val: 1.3em; /* preferred */
+    --max: 1.5em; /* max */
+  }
 
 body { 
     width: 100%;
@@ -60,7 +73,8 @@ body {
     padding: 0;
     font-weight: 300;
     line-height: .8;
-    font-family: 'Times New Roman', sans-serif;
+    /* font-family: 'Times New Roman', sans-serif; */
+    font-family: var(--font-gt-america);
     /* font-family: var(--body-font); */
 }
 
@@ -86,7 +100,7 @@ body {
 }
 
 .title-inner-container {
-    width: 66.66%;
+    width: 66%;
     height: 100%;
     border: solid green 1px;
 }
@@ -96,22 +110,29 @@ body {
     flex-direction: column;
     position: -webkit-sticky;
     position: sticky;
-    font-size: 12rem;
     top: 0;
-    width: 3.3rrem;
+    width: 50%;
     height: fit-content;
     border: solid green 1px;
+}
+.title-wrapper span{
+    font-weight: 700;
+    font-size: clamp(var(--min), var(--val), var(--max));
+    --min: 1em; /* min span font size*/
+    --val: 5vw; /* preferred span font size*/
+    --max: 3em; /* max span font size*/
 }
 
 .ttop, .tbtm {
     width: 100%;
     height: 100%;
-    animation: slide-inner 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation: slide-inner 1s 1s cubic-bezier(0.4, 0.1, 1, 1) both;
     border: solid green 1px;
 }
 
 .title-inner {
     display: inline-block;
+    text-align: center;
     padding-left: 2%;
     width: 100%;
     height: 100%;
@@ -462,7 +483,7 @@ body {
 } */
 @media (prefers-reduced-motion: no-preference) {
     .shrink-inner {
-        animation: a-inner 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+        animation: a-inner 1s 1s cubic-bezier(0,1.5,1,1.5) both;
     }
 
     /* .fixed-title { */
