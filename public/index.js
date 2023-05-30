@@ -37,17 +37,19 @@ function topFunction() {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const title = entry.target.querySelector('.title-wrapper')
+        const ttop = entry.target.querySelector('.ttop')
+        const tbtm = entry.target.querySelector('.tbtm')
     
         if (entry.isIntersecting) {
           title.classList.add('shrink-inner')
-          ttop.classList.remove('slide-title')
-          tbtm.classList.remove('slide-title')
+          ttop.classList.add('slide-title')
+          tbtm.classList.add('slide-title')
           
           return // if we added the class, exit the function
         }
     
         // We're not intersecting, so remove the class!
-        /* title.classList.remove('shrink-inner') */
+        // title.classList.remove('shrink-inner')
       })
   })
   observer.observe(document.querySelector('.title-container'))

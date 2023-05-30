@@ -17,7 +17,7 @@
     --body-font: "Helvetica neue", sans-serif;
     --font-gt-america: "GT-America-Bold", sans-serif;
     --padding-areas: 5em;
-    --cubic-bezier-title: 1s 2s cubic-bezier(.91,-0.01,.53,1) both;
+    --cubic-bezier-title: 0.6s 2s cubic-bezier(.45,0,.28,1) both;
 }
 
 @keyframes a-inner {
