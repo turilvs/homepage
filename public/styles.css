@@ -18,6 +18,7 @@
     --font-gt-america: "GT-America-Bold", sans-serif;
     --padding-areas: 5em;
     --header-font-size: 3em;
+    --cubic-bezier-title: 1s 2s cubic-bezier(.91,-0.01,.53,1) both;
 }
 
 @keyframes a-inner {
@@ -25,7 +26,7 @@
         font-size: 3em;
     }
     to {
-        font-size: 1em;
+        font-size: 1.3em;
     }
   }
 
@@ -43,7 +44,7 @@ html {
 }
 
 
-h1, h2, p {
+h1, h2, p, span {
     font-size: clamp(var(--min), var(--val), var(--max));
   }
   
@@ -59,6 +60,12 @@ h1, h2, p {
     --max: 2.25em;  /* max */
   }
   p {
+    --min: 1em;   /* min */
+    --val: 1.3em; /* preferred */
+    --max: 1.5em; /* max */
+  }
+
+  a {
     --min: 1em;   /* min */
     --val: 1.3em; /* preferred */
     --max: 1.5em; /* max */
@@ -117,7 +124,6 @@ body {
 }
 .title-wrapper span{
     font-weight: 700;
-    font-size: clamp(var(--min), var(--val), var(--max));
     --min: 1em; /* min span font size*/
     --val: 5vw; /* preferred span font size*/
     --max: 3em; /* max span font size*/
@@ -126,7 +132,7 @@ body {
 .ttop, .tbtm {
     width: 100%;
     height: 100%;
-    animation: slide-inner 1s 1s cubic-bezier(0.4, 0.1, 1, 1) both;
+    animation: slide-inner var(--cubic-bezier-title);
     border: solid green 1px;
 }
 
@@ -146,8 +152,8 @@ body {
     align-items: center;
     justify-content: center;
     top: 1em;
-    width: 19em;
-    height: 4em;
+    width: fit-content;
+    height: fit-content;
     border-radius: 15px;
     padding: 0;
     transition: all 200ms ease;
@@ -158,14 +164,14 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    padding: 0;
+    padding-left: .5em;
+    padding-right: .5em;
 }
 .menu-item {
     display: block;
     padding: 0px;
     margin: 10px;
     border-radius: 8px;
-    font-size: 1.2em;
     text-decoration: none;
     list-style-type: none;
     transition: all 200ms ease;
@@ -184,6 +190,7 @@ body {
 
 .menu-item a {
     font-weight: 700;
+    font-size: 1.6em;
     color: var(--color-main-txt);
     text-decoration: none;
 }
@@ -483,7 +490,7 @@ body {
 } */
 @media (prefers-reduced-motion: no-preference) {
     .shrink-inner {
-        animation: a-inner 1s 1s cubic-bezier(0,1.5,1,1.5) both;
+        animation: a-inner var(--cubic-bezier-title);
     }
 
     /* .fixed-title { */
