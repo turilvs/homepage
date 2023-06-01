@@ -1,5 +1,5 @@
 // Funktio jolla lisätään navbariin tausta
-const addNavbarBg = () => {
+const headerScrollAnimation = () => {
     if (window.pageYOffset > 70) {
         document.querySelector("#navbar").classList.add('transparent')
         document.querySelectorAll('.title-inner').forEach(x=>x.classList.add('shrink-title'))
@@ -8,20 +8,25 @@ const addNavbarBg = () => {
         document.querySelector(".tbtm").classList.add('slide-out')
     }
     else {
-        document.querySelector("#navbar").classList.remove("transparent")   
+        document.querySelector("#navbar").classList.remove("transparent")
+        
     }
 }
 window.addEventListener("scroll", headerScrollAnimation)
 
+
 // Nappi joka vie sivun alkuun
+const topFunction = () => {
+    document.body.scrollTop = 0 //Safari
+    document.documentElement.scrollTop = 0 //Chrome, Firefox, IE and Opera
+  }
+
 const toTopButton = document.querySelector(".to-top-button")
 toTopButton.addEventListener('click', topFunction)
 
-const toTopActivationPoint = document.querySelector("#main").getBoundingClientRect()
-
 
 // Funktio jolla näytetään sivun alkuun vievä nappi
-function scrollFunction() {
+const scrollFunction = () => {
     if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
         toTopButton.style.display = "flex"
     } else {
@@ -30,12 +35,6 @@ function scrollFunction() {
 }
 window.addEventListener("scroll", scrollFunction)
 
-
-// Funktio joka vie sivun alkuun
-function topFunction() {
-  document.body.scrollTop = 0 //Safari
-  document.documentElement.scrollTop = 0 //Chrome, Firefox, IE and Opera
-}
 
 // title-container observer
 // const observer = new IntersectionObserver(entries => {
