@@ -17,8 +17,8 @@
     --body-font: "Helvetica neue", sans-serif;
     --font-gt-america: "GT-America-Bold", sans-serif;
     --padding-areas: 5em;
-    --cubic-bezier-title-slide: .3s 0s cubic-bezier(1,0,0,1) both;
-    --cubic-bezier-title-opacity: .5s 0s cubic-bezier(.48,0,0,1) both;
+    --cubic-bezier-title-opacity: .6s 2.5s cubic-bezier(.48,0,0,1) both;
+    --cubic-bezier-title-slide: .6s 2.5s cubic-bezier(1,0,0,1) both;
 }
 
 @keyframes shrink-title {
@@ -31,31 +31,31 @@
   }
 
 @keyframes opacity-title {
-  from {
-      opacity:1
-  }
-  25% {
-    opacity: 0;
-  }
+    from {
+        opacity:1
+    }
+    25% {
+      opacity: 0;
+    }
 
-  75% {
-    opacity: 0;
+    75% {
+      opacity: 0;
 
-  }
+    }
 
-  to {
-    opacity: 1;
-  }
+    to {
+      opacity: 1;
+    }
 }
 
 
 @keyframes slide-out {
-  from {
-      transform: translate(100%, 200%);
-  }
-  to {
-      transform: none;
-  }
+    from {
+        transform: translate(75%, 200%);
+    }
+    to {
+        transform: none;
+    }
 }
 
 html {
@@ -126,13 +126,13 @@ body {
     width: 100%;
     height: 56em;
     position: relative;
-    /* border: solid green 1px; */
+    border: solid green 1px;
 }
 
 .title-inner-container {
-    width: 66%;
+    width: 80%;
     height: 100%;
-    /* border: solid green 1px; */
+    border: solid green 1px;
 }
 
 .title-wrapper {
@@ -141,24 +141,23 @@ body {
     position: -webkit-sticky;
     position: sticky;
     opacity: 1;
-    top: 3em;
+    top: 1rem;
     width: 50%;
     height: fit-content;
-    /* border: solid green 1px; */
+    /* transform: translate(75%, 100%); */
+    border: solid green 1px;
 }
 .title-wrapper span{
     font-weight: 700;
-    perspective: 1em;
     --min: 7em; /* min span font size*/
     --val: 7vw; /* preferred span font size*/
     --max: 10em; /* max span font size*/
 }
 
 .ttop, .tbtm {
-    transform: translate(100%, 200%);
     width: 100%;
     height: 100%;
-    /* border: solid green 1px; */
+    border: solid green 1px;
 }
 
 .title-inner {
@@ -167,7 +166,7 @@ body {
     display: inline-block;
     text-align: center;
     padding-left: 2%;
-    /* border: solid green 1px; */
+    border: solid green 1px;
 }
 
 
@@ -176,7 +175,7 @@ body {
     position: fixed;
     align-items: center;
     justify-content: center;
-    top: 1em;
+    top: 1rem;
     width: fit-content;
     height: fit-content;
     border-radius: 15px;
@@ -527,9 +526,5 @@ body {
     .a-reverse {
         animation-direction: reverse;
     }
-
-
-    /* .fixed-title { */
-    /* } */
 
   }
