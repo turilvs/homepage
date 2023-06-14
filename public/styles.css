@@ -448,7 +448,6 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    grid-template-rows: 2fr 4fr 1fr;
     position: relative;
     color: var(--color-main-txt);
     bottom: 0;
@@ -461,9 +460,10 @@ body {
 }
 
 .card-empty {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
-    grid-template-rows: 2fr 4fr 1fr;
+    /* grid-template-rows: 2fr 4fr 1fr; */
     position: relative;
     width: 100%;
     height: 100%;
@@ -481,7 +481,7 @@ body {
 
 .card-title {
     width: 100%;
-    height: 100%;
+    height: 20%;
     z-index: 1;
     font-size: 2em;
     align-self: center;
@@ -500,13 +500,20 @@ body {
 .card-footer {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 20%;
     align-items: center;
     justify-content: flex-end;
 }
-.github-logo {
-    padding-right: .3em;
-    font-size: 2.5em;
+.gh-logo-wrapper {
+    width: 4em;
+    height: 4em;
+    margin: 1em;
+}
+
+.gh-logo-wrapper img {
+    width: 100%;
+    height: 100%;
+    bottom: 1em;
 }
 
 .transparent {
