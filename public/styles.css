@@ -377,13 +377,16 @@ body {
 .pp-container {
     align-content: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 
 .pp-wrapper img {
     object-fit: cover;
     max-width: 200px;
-    width: 200px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     border: solid 2px white;
 }
@@ -410,22 +413,23 @@ body {
     background-color: #555; 
   }
 
-.card-container {
+.card-column {
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
     align-items: center;
     justify-items: center;
+    gap: 3em;
 }
 
-.card-grid {
-    display: grid;
+.card-container {
+    display: flex;
     align-items: center;
     justify-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    gap: 3em;
     width: 100%;
     height: 100%;
-    gap: 1em;
-    grid-template-columns: repeat(24, 1fr); 
 }
 
 .card {
@@ -444,6 +448,11 @@ body {
     overflow: hidden;
 }
 
+.project-text {
+    width: 100%;
+    height: 100%;
+}
+
 /* .card:hover  {
     box-shadow: 3px 1em 6px rgba(0,0,0,0.3);
     transform: translateY(-1em);
@@ -455,12 +464,11 @@ body {
 .c1  {
     background-color: rgb(74, 9, 74);
     border: solid rgb(177, 147, 177) 1px;
-    grid-column-start: 1; 
-    grid-column-end: 7; 
+
 }
 .c2  {
-    grid-column-start: 7; 
-    grid-column-end: 13; 
+    grid-column-start: 13; 
+    grid-column-end: 19; 
 }
 .c3  {
     grid-column-start: 13; 
