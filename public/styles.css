@@ -605,6 +605,7 @@ body {
     width: 40em;
     height: 40em;
     border: green solid 1px;
+    animation: gluster-spin 60s linear infinite;
   }
   
   .blob1 {
@@ -654,6 +655,19 @@ body {
     50% {bottom: 15%; left: 20%;}
     100% {bottom: 8%; left: 20%;}
   }
+
+  @keyframes blob3 {
+    0% {bottom: 8%; left: 20%;}
+    50% {bottom: 15%; left: 20%;}
+    100% {bottom: 8%; left: 20%;}
+  }
+
+@keyframes gluster-spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
 
 @media (prefers-reduced-motion: no-preference) {
     .shrink-title {
