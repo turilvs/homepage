@@ -117,6 +117,14 @@ body {
     box-sizing: border-box;
 }
 
+.top {
+    z-index: 2;
+}
+
+.mid .bottom {
+    z-index: 1;
+}
+
 .header {
     display: flex;
     width: 100%;
@@ -125,15 +133,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 .screen-noisy {
+    position: relative;
     display: flex;
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
     background: var(--color-main-noisy);
-    z-index: -1;
 }
 
 .title-container {
@@ -237,7 +246,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background: var(--color-main-noisy);
+    background: var(--color-transparent);
     margin: 0;
     position: relative;
     z-index: 1;
@@ -598,19 +607,38 @@ body {
     /* opacity: .7r; */
   }
 
+  .gluster-header {
+    left: -14em;
+    top: -14em;
+    width: 50em;
+    height: 50em;
+    /* border: green solid 1px; */
+  }
+
+  .gluster-main {
+    right: -14em;
+    top: 14em;
+    width: 70em;
+    height: 70em;
+    /* border: green solid 1px; */
+  }
+
+  .gluster-header2 {
+    left: -14em;
+    top: -14em;
+    width: 50em;
+    height: 50em;
+    /* border: green solid 1px; */
+  }
+
   .blob-gluster {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 40em;
-    height: 40em;
-    border: green solid 1px;
     animation: gluster-spin 60s linear infinite;
   }
   
   .blob1 {
     position: absolute;
-    background: radial-gradient(circle, var(--color-blob1), var(--color-transparent) 100%);
+    background: radial-gradient(circle, var(--color-blob2), var(--color-transparent) 100%);
     height: 60%;
     width: 60%;
     top: 5%;
