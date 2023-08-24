@@ -117,28 +117,27 @@ body {
     box-sizing: border-box;
 }
 
-.top {
-    z-index: 2;
+/* .top {
+    z-index: 3;
 }
 
 .mid .bottom {
     z-index: 1;
-}
+} */
 
 .header {
     display: flex;
+    position: relative;
     width: 100%;
     height: 100%;
     background: var(--color-transparent);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 3;
 }
 
 .screen-noisy {
     position: relative;
-    display: flex;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
@@ -615,8 +614,16 @@ body {
     /* border: green solid 1px; */
   }
 
-  .gluster-main {
+  .gluster-about {
     right: -14em;
+    top: 14em;
+    width: 70em;
+    height: 70em;
+    /* border: green solid 1px; */
+  }
+
+  .gluster-projects {
+    left: 17em;
     top: 14em;
     width: 70em;
     height: 70em;
