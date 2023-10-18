@@ -22,7 +22,7 @@
     --body-font: "Helvetica neue", sans-serif;
     --font-gt-america: "GT-America-Bold", sans-serif;
     --body-font-2: "Inter", sans-serif;
-    --padding-areas: 5em;
+    --padding-areas: 5rem;
     --cubic-bezier-title-opacity: .6s 1.5s cubic-bezier(.48,0,0,1) both;
     --cubic-bezier-title-slide: .6s 1.5s cubic-bezier(1,0,0,1) both;
 }
@@ -69,40 +69,37 @@ html {
 }
 
 
-h1, h2, p, .title-wrapper span{
+h1, h2, h3, p, .title-wrapper span{
     font-size: clamp(var(--min), var(--val), var(--max));
   }
   
   /* Fontti koot */
   h1 {
     --min: 1.5rem; /* min */
-    --val: 1.96rem; /* preferred */
+    --val: 2.125rem; /* preferred */
     --max: 2.5rem; /* max */
-    font-weight: 300;
+    font-weight: 400;
   }
   h2 {
     --min: 1.3rem;   /* min */
-    --val: 1.69rem;     /* preferred */
-    --max: 2.25rem;  /* max */
+    --val: 1.875rem;     /* preferred */
+    --max: 2rem;  /* max */
     font-weight: 300;
   }
 
   h3 {
     --min: 1.1rem;   /* min */
     --val: 1.5rem;     /* preferred */
-    --max: 1.9rem;  /* max */
+    --max: 1.8rem;  /* max */
     font-weight: 300;
   }
 
   a, p {
     --min: 1rem;   /* min */
-    --val: 1.3rem; /* preferred */
+    --val: 1.2rem; /* preferred */
     --max: 1.5rem; /* max */
   }
 
-  .h-bigger {
-    font-size: 2.5em;
-  }
 
 body { 
     width: 100%;
@@ -113,7 +110,6 @@ body {
     margin: 0;
     padding: 0;
     font-weight: 300;
-    line-height: .8;
     /* font-family: 'Times New Roman', sans-serif; */
     /* font-family: var(--font-gt-america); */
     font-family: var(--body-font-2);
@@ -126,10 +122,6 @@ body {
  .top {
     overflow: hidden;
 }
-
-/* .mid .bottom {
-    z-index: 1;
-} */
 
 .header {
     display: flex;
@@ -171,6 +163,7 @@ body {
     top: 1rem;
     width: 50%;
     height: fit-content;
+    line-height: .8;
     /* transform: translate(75%, 100%); */
     /* border: solid green 1px; */
 }
@@ -249,6 +242,7 @@ body {
 .main {
     display: flex;
     flex-direction: column;
+    padding-top: var(--padding-areas);
     height: 100%;
     width: 100%;
     background: var(--color-main-noisy);
@@ -259,7 +253,7 @@ body {
 
 .about {
     display: flex;
-    padding-top: 2em;
+    padding-top: 2rem;
     padding-bottom: var(--padding-areas);
     flex-direction: column;
     scroll-behavior: smooth;
@@ -277,7 +271,9 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-
+}
+.projects-container {
+    padding-top: 2rem;
 }
 .projects-header {
     width: 100%;
@@ -307,7 +303,7 @@ body {
     justify-content: center;
     overflow-x: hidden;
     background: var(--color-bottom-noisy);
-    padding-top: calc(var(--padding-areas));
+    padding-top: var(--padding-areas);
     padding-bottom: var(--padding-areas);
     width: 100%;
     height: 100%;
@@ -454,6 +450,8 @@ body {
 
 .card-column {
     display: flex;
+    padding-top: 2rem;
+    margin-top: 1em;
     flex-direction: column;
     align-items: center;
     justify-items: center;
