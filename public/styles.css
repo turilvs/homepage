@@ -10,6 +10,7 @@
     --color-card-bg: rgb(223, 223, 220);
     --color-footer-links: rgba(235, 255, 237, 1);
     --color--secondary: rgba(48,76,66, 1);
+    --color-underline: rgb(121, 141, 134);
     --color-highlight: rgba(143, 220, 194, 0.1);
     --color-menu-highlight: rgb(78, 112, 101);
     --color-blur: rgba(3, 19, 20, 0.9);
@@ -314,16 +315,18 @@ body {
     display: grid;
     /* border: solid var(--color-glass-footer) 15px; */
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr .2fr;
     grid-template-areas: 
     'a a'
-    'c d'
+    'b b'
     'c d';
     width: 100%;
     height: 100%;    
 }
 
 .topic-header-wrapper {
+    width: 100%;
+    height: 100%;
     text-align: center;
     font-weight: 300;
 }
@@ -336,16 +339,12 @@ body {
     font-size: 3rem;
     
 }
-.footer-sub-h {
-    text-align: center;
-}
 
 .link-container {
     display: flex;
     flex-direction: column;
     padding-left: 1em;
     width: 100%;
-    height: 100%;
 }
 
 .footer-topic {
@@ -355,30 +354,44 @@ body {
     padding:0; 
     margin-bottom: 0;
 }
+
+.footer-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 1px var(--color-underline);
+    grid-area: b;
+}
+.footer-wrapper {
+    display: flex;
+    width: 60%;
+    height: 100%;
+}
 .footer-left {
     display: flex;
     justify-content: center;
-    grid-area: c;
-    padding-left: 5em;
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
 
 .footer-right {
     display: flex;
     justify-content: center;
-    grid-area: d;
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
 
-.h-socials {
+.footer-sub-h {
     margin-top: 0;
     text-align: center;
+    border-bottom: solid 1px white;
 }
 
 .social-icons {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: .3em;
@@ -386,8 +399,8 @@ body {
 
 
 .footer-icon-wrapper {
-    width: 6rem;
-    height: 6rem;
+    width: 4.5rem;
+    height: 4.5rem;
     margin: 1em;
 }
 
