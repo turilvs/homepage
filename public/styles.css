@@ -346,6 +346,58 @@ body {
     border: solid 1px white;
 }
 
+.skills-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills {
+    display: flex;
+    width: 100%;
+    height: 7em;
+    gap: 1em;
+}
+
+.svg-70 {
+    width: 80px;
+    height: fit-content;
+}
+
+.sub-h {
+    font-weight: 600;
+    text-align: start;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+.skill-name-container {
+    position: relative;
+    opacity: 0;
+    top: 30%;
+    padding: 4px 10px;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #555;
+    transition: all 150ms ease-in;
+}
+
+.skill-container:hover  > .skill-name-container {
+    top: 0;
+    opacity: 1;
+}
+
+.skill-name{
+    margin: 0;
+}
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -502,6 +554,7 @@ body {
 
 .bottom-low {
     display: flex;
+    color: var(--color-blob1);
     width: 100%;
     height: 100%;
     justify-content: center;
