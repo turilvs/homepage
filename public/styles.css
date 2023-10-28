@@ -269,19 +269,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
-    padding-bottom: var(--padding-areas);
+    padding: 2em;
 }
 
 .about-content-container {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 2fr ;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
     'a b'
     'c b'
     'c b';
     width: 100%;
+    max-width: 900px;
     height: 100%;
     margin-top: 3em;
 }
@@ -318,7 +318,7 @@ body {
 .bulletpoint-icon-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     width: 4em;
     height: 100%;
 }
@@ -330,7 +330,7 @@ body {
 
 .pp-container {
     display: flex;
-    justify-content: end;
+    justify-content: start;
     padding-top: 1em;
     padding-right: 7em;
     width: 100%;
