@@ -556,17 +556,16 @@ body {
     height: fit-content;
     margin: 1em;
 }
+
 .footer-icon-wrapper a {
     transition: all 300ms ease;
+    border-bottom: solid 2px var(--color-transparent);
 }
 
-.footer-icon-wrapper:hover  > a {
+.footer-icon-wrapper:hover > a {
     border-bottom: solid 2px var(--color-underline);
 }
 
-.footer-icon-wrapper:hover  > svg {
-    fill: var(--color--secondary);
-}
 
 .footer-icon-wrapper img, .bulletpoint-icon img {
     width: 100%;
