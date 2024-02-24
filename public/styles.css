@@ -21,6 +21,7 @@
     --color-menu-text: rgb(219, 234, 223);
     --color-blob1: rgb(87, 109, 101);
     --color-blob2: rgb(69, 86, 79);
+    --color-skills-container: rgba(81, 94, 88, .4);
     --body-font: "Helvetica neue", sans-serif;
     --font-gt-america: "GT-America-Bold", sans-serif;
     --body-font-2: "Inter", sans-serif;
@@ -72,7 +73,7 @@ html {
 }
 
 
-h1, h2, h3, p, .title-wrapper span{
+h1, h2, h3, p, .title-inner{
     font-size: clamp(var(--min), var(--val), var(--max));
   }
   
@@ -177,16 +178,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
+    max-width: 900px;
     height: fit-content;
     line-height: 1.2;
     /* transform: translate(75%, 100%); */
     /* border: solid green 1px; */
-}
-.title-wrapper span{
-    font-weight: 600;
-    --min: 4rem; /* min span font size*/
-    --val: 7rem; /* preferred span font size*/
-    --max: 8rem; /* max span font size*/
 }
 
 .ttop, .tbtm {
@@ -200,6 +196,10 @@ body {
     height: 100%;
     display: inline-block;
     text-align: center;
+    font-weight: 600;
+    --min: 4rem; /* min span font size*/
+    --val: 10rem; /* preferred span font size*/
+    --max: 12rem; /* max span font size*/
     /* border: solid green 1px; */
 }
 
@@ -355,9 +355,12 @@ body {
 .skills-container {
     display: flex;
     flex-direction: column;
-    margin-top: 8em;
+    margin-top: 5em;
     width: 100%;
     max-width: 900px;
+    background-color: var(--color-skills-container);
+    border-radius: 30px;
+    padding: 1em;
     /* border: 1px green solid; */
 }
 
@@ -639,7 +642,6 @@ body {
 
 .card-column {
     display: flex;
-    padding-top: 2rem;
     margin-top: 1em;
     flex-direction: column;
     align-items: center;
@@ -651,11 +653,11 @@ body {
     display: flex;
     align-items: center;
     justify-items: center;
-    padding-left: 15%;
-    padding-right: 15%;
     gap: 3em;
     width: 100%;
+    max-width: 900px;
     height: 100%;
+    padding: 2em;
 }
 
 .card {
@@ -701,7 +703,6 @@ body {
     grid-column-end: 19; 
 }
 .c4  {
-    
     grid-column-start: 19; 
     grid-column-end: 25;
 }
